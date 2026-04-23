@@ -1,0 +1,119 @@
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 675ms ease-out,
+    transform 675ms ease-out;
+  pointer-events: none;
+}
+
+.reveal--left {
+  transform: translateX(-16px);
+}
+
+.reveal--right {
+  transform: translateX(16px);
+}
+
+.reveal--up {
+  transform: translateY(16px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.reveal a,
+.reveal button,
+.reveal input,
+.reveal textarea,
+.reveal select {
+  pointer-events: auto;
+}
+
+.reveal.delay-1 {
+  transition-delay: 100ms;
+}
+
+.reveal.delay-2 {
+  transition-delay: 180ms;
+}
+
+.reveal.delay-3 {
+  transition-delay: 260ms;
+}
+
+.reveal.delay-4 {
+  transition-delay: 340ms;
+}
+
+.reveal.delay-5 {
+  transition-delay: 420ms;
+}
+
+.reveal.delay-6 {
+  transition-delay: 500ms;
+}
+
+.reveal.delay-7 {
+  transition-delay: 580ms;
+}
+
+.reveal.delay-8 {
+  transition-delay: 660ms;
+}
+
+.reveal.delay-9 {
+  transition-delay: 740ms;
+}
+
+.reveal.delay-10 {
+  transition-delay: 820ms;
+}
+
+.reveal.delay-11 {
+  transition-delay: 900ms;
+}
+
+.reveal.delay-12 {
+  transition-delay: 980ms;
+}
+
+.reveal.delay-13 {
+  transition-delay: 1060ms;
+}
+
+.reveal.delay-14 {
+  transition-delay: 1140ms;
+}
+
+.reveal.delay-15 {
+  transition-delay: 1220ms;
+}
+
+.reveal--slow {
+  transition-duration: 700ms, 700ms;
+}
+
+.navbar.reveal {
+  transition-duration: 400ms, 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .reveal {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

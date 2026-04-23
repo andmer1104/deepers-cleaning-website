@@ -1,0 +1,41 @@
+/* ===== GLOBAL / ROOT ===== */
+:root {
+    --teal: #34b4ba;
+    --pink: #e71c6f;
+    --bg-off-white: #ffffff;
+    --teal-text-shadow: none;
+    --teal-dark-text-shadow: none;
+    --teal-btn-text-shadow: none;
+  }
+  
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.55;
+    letter-spacing: normal;
+    color: #000000;
+    background-color: var(--bg-off-white);
+    zoom: 0.9;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+  }

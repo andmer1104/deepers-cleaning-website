@@ -1,0 +1,21 @@
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 60px 0 40px;
+  background-color: #54d7dd;
+}
+
+.reviews .section-title {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-embed {
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.reviews-embed {
+  min-height: 500px;
+}

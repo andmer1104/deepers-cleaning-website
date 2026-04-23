@@ -1,0 +1,110 @@
+/* ===== SECTION HEADINGS ===== */
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--teal);
+  text-shadow: var(--teal-text-shadow);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.title-bar {
+  width: 110px;
+  height: 6px;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+.trust-bar {
+    background: var(--bg-off-white);
+    margin-top: -40px;
+    padding: 15px 0;
+  }
+  
+  .trust-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .trust-item {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1rem;
+  }
+  
+  .trust-item span {
+    margin-left: 6px;
+  }
+
+/* ===== BUTTONS ===== */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--teal);
+  color: #ffffff;
+  text-shadow: var(--teal-btn-text-shadow);
+  padding: 0.7rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 24px rgba(84, 215, 221, 0.18);
+}
+
+.btn-secondary:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(84, 215, 221, 0.22);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 999px;
+  background-color: var(--pink);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}

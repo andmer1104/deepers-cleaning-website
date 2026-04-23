@@ -1,0 +1,486 @@
+/* Main CSS file - imports all stylesheets in order */
+
+/* Base styles - variables, resets, global styles */
+@import url('base.css');
+
+/* Reusable components - buttons, section headings */
+@import url('components.css');
+
+/* Animations */
+@import url('animations.css');
+
+/* Section-specific styles */
+@import url('sections/navbar.css');
+@import url('sections/hero.css');
+@import url('sections/services.css');
+@import url('sections/work-preview.css');
+@import url('sections/about.css');
+@import url('sections/reviews.css');
+@import url('sections/contact.css');
+@import url('sections/contact-page.css');
+@import url('sections/service-detail.css');
+@import url('sections/thanks.css');
+@import url('sections/footer.css');
+@import url('sections/promo.css');
+@import url('sections/promo-page.css');
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Anchor offset: sections scroll into view below sticky navbar (desktop) */
+#top,
+#services,
+#about,
+#reviews,
+#contact {
+  scroll-margin-top: 90px;
+}
+
+/* Ensure all button text is centered */
+button,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.hero-btn,
+.promo-bar-cta,
+.hero-promo-btn,
+.promo-page-cta,
+.promo-page-secondary,
+.service-view-results,
+.service-detail-cta-buttons a {
+  text-align: center !important;
+}
+
+/* ===== MOBILE HERO BUTTON FIX ===== */
+@media (max-width: 768px) {
+  .hero-buttons,
+  .cta-buttons,
+  .service-buttons,
+  .read-more-cta-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.9rem !important;
+    width: 100%;
+  }
+
+  .hero-buttons a,
+  .cta-buttons a,
+  .service-buttons a,
+  .read-more-cta-buttons a,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 800;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
+   MOBILE NAVBAR + MOBILE BUTTON POLISH
+========================================================= */
+
+@media (max-width: 768px) {
+  /* ===== GENERAL PAGE SPACING ===== */
+  .container,
+  .read-more-container,
+  .hero-container,
+  .services-container,
+  .contact-container,
+  .reviews-container,
+  .footer-inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    box-sizing: border-box;
+  }
+
+  /* ===== HERO / TOP SECTION ===== */
+  .hero,
+  .hero-section,
+  .about-hero,
+  .services-hero,
+  .read-more-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero h1,
+  .hero-title,
+  .read-more-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .hero h2 {
+    text-align: center;
+  }
+
+  .hero p,
+  .hero-subtext,
+  .read-more-hero-subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  /* ===== BUTTON GROUPS ===== */
+  .hero-buttons,
+  .cta-buttons,
+  .service-buttons,
+  .about-buttons,
+  .read-more-cta-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+
+  /* ===== ALL BUTTONS ===== */
+  .hero-buttons a,
+  .cta-buttons a,
+  .service-buttons a,
+  .about-buttons a,
+  .read-more-cta-buttons a,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    width: 100% !important;
+    max-width: 260px !important;
+    min-width: 0 !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    font-size: 0.98rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* ===== READ MORE PAGE SECTIONS ===== */
+  .read-more-section {
+    padding: 3rem 0;
+  }
+
+  .read-more-block,
+  .read-more-block--reversed,
+  .read-more-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+  }
+
+  .read-more-block--reversed .read-more-text,
+  .read-more-block--reversed .read-more-image {
+    order: unset;
+  }
+
+  .read-more-text {
+    text-align: left;
+  }
+
+  .read-more-text h2,
+  .read-more-block--location .read-more-cta-content h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .read-more-text p,
+  .read-more-text ul,
+  .read-more-block--location .read-more-cta-content p {
+    text-align: left;
+    font-size: 1.04rem;
+    line-height: 1.8;
+  }
+
+  .read-more-image,
+  .read-more-hero-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .read-more-image img,
+  .read-more-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  /* ===== TRUST POINTS ===== */
+  .read-more-block--location .read-more-trust-points {
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem;
+  }
+
+  .read-more-block--location .read-more-trust-item {
+    font-size: 1rem;
+  }
+
+  /* ===== HOW IT WORKS ===== */
+  .read-more-block--location .read-more-how-it-works h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
+
+  .read-more-block--location .read-more-steps {
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem;
+  }
+
+  .read-more-block--location .read-more-step {
+    padding: 1rem 1rem;
+    border-radius: 14px;
+  }
+
+  .read-more-block--location .read-more-step p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ===== LOCATION CTA CONTENT ===== */
+  .read-more-block--location .read-more-cta-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .read-more-block--location .read-more-cta-content p,
+  .read-more-block--location .read-more-trust-points,
+  .read-more-block--location .read-more-how-it-works {
+    width: 100%;
+  }
+
+  /* ===== HOME PAGE / SERVICE IMAGES ===== */
+  .services-header-banner,
+  .service-banner,
+  .hero-image img,
+  .services-image img {
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   SAFER MOBILE FIX
+   Only fixes top navbar + mobile buttons
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-buttons,
+  .cta-buttons,
+  .service-buttons,
+  .about-buttons,
+  .read-more-cta-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+
+  .hero-buttons a,
+  .cta-buttons a,
+  .service-buttons a,
+  .about-buttons a,
+  .read-more-cta-buttons a {
+    width: 100% !important;
+    max-width: 260px !important;
+    min-width: 0 !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    line-height: 1 !important;
+  }
+
+  /* About page location buttons */
+  .read-more-block--location .read-more-cta-buttons {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .read-more-block--location .read-more-cta-buttons .btn-primary,
+  .read-more-block--location .read-more-cta-buttons .btn-secondary {
+    width: 220px !important;
+    max-width: 220px !important;
+    min-width: 220px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons a,
+  .cta-buttons a,
+  .service-buttons a,
+  .about-buttons a,
+  .read-more-cta-buttons a {
+    max-width: 245px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+  }
+
+  .read-more-block--location .read-more-cta-buttons .btn-primary,
+  .read-more-block--location .read-more-cta-buttons .btn-secondary {
+    width: 210px !important;
+    max-width: 210px !important;
+    min-width: 210px !important;
+  }
+}
+
+/* ===== MOBILE FULL-SCREEN SECTION LANDING (FIXED) ===== */
+@media (max-width: 768px) {
+
+  /* Mobile: larger offset for navbar + promo bar */
+  html {
+    scroll-padding-top: 180px;
+  }
+
+  #top,
+  #about,
+  #services,
+  #reviews,
+  #contact {
+    scroll-margin-top: 180px;
+  }
+
+  /* ===== IMPORTANT FIX =====
+     DO NOT APPLY FLEX TO services-details
+     (this was breaking your layout)
+  */
+  .hero,
+  .about,
+  .reviews,
+  .contact {
+    min-height: calc(100svh - 88px);
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* FIXED: services section must stay block */
+  .services-details {
+    min-height: calc(100svh - 88px);
+    display: block;
+  }
+
+  /* Containers */
+  .hero .hero-container,
+  .about .container,
+  .services-details .container,
+  .reviews .container,
+  .contact .container {
+    width: 100%;
+  }
+
+  /* Spacing */
+  .hero {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .about,
+  .services-details,
+  .reviews,
+  .contact {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Services banner */
+  .services-header-banner {
+    min-height: 120px;
+    padding: 1.25rem 1rem;
+  }
+
+  .services-header-title {
+    margin-bottom: 0.4rem;
+  }
+
+  /* About section stacking */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-image-wrapper img,
+  .about-image img {
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Section spacing */
+  .section-heading {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .services-details {
+    padding-top: 0.25rem !important;
+    margin-top: 0 !important;
+  }
+
+  .about {
+    padding-top: 0.75rem !important;
+    margin-top: 0 !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+}

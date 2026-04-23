@@ -1,0 +1,178 @@
+/* ===== PROMO BAR + HERO PROMO CARD =====
+   Matches Deepers Cleaning branding: teal, pink, Nunito, soft shadows */
+
+/* Top promo bar - slim, below navbar */
+.promo-bar {
+  background: #54d7dd;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-bottom: 3px solid var(--pink);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.promo-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promo-bar-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.promo-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem 1.25rem;
+  border-radius: 999px;
+  background-color: var(--pink);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(231, 28, 111, 0.2);
+  font-family: 'Nunito', sans-serif;
+}
+
+.promo-bar-cta:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(231, 28, 111, 0.25);
+}
+
+/* Hero promo card - horizontal, low-height announcement */
+.hero-promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 520px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(84, 215, 221, 0.18);
+}
+
+.hero-promo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-promo-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  text-shadow: var(--teal-text-shadow);
+  margin-bottom: 0.15rem;
+}
+
+.hero-promo-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--teal);
+  text-shadow: var(--teal-text-shadow);
+  line-height: 1.2;
+  margin: 0 0 0.1rem 0;
+}
+
+.hero-promo-sub {
+  font-size: 0.78rem;
+  color: #444;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.hero-promo-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background-color: var(--pink);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(231, 28, 111, 0.15);
+  font-family: 'Nunito', sans-serif;
+}
+
+.hero-promo-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(231, 28, 111, 0.2);
+}
+
+/* Mobile: promo bar text wraps, CTA stays tappable */
+@media (max-width: 768px) {
+  .promo-bar {
+    padding: 0.6rem 1rem;
+  }
+
+  .promo-bar-inner {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .promo-bar-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .promo-bar-cta {
+    padding: 0.5rem 1.5rem;
+    min-height: 44px;
+    min-width: 140px;
+  }
+
+  .hero-promo-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.9rem;
+    max-width: 100%;
+    gap: 0.6rem;
+  }
+
+  .hero-promo-title {
+    font-size: 0.9rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .hero-promo-btn {
+    width: 100%;
+    min-height: 40px;
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-bar-text {
+    font-size: 0.85rem;
+  }
+}

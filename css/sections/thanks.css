@@ -1,0 +1,77 @@
+/* ===== THANKS PAGE ===== */
+.thanks-section {
+  background-color: var(--bg-off-white);
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.thanks-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thanks-title {
+  color: var(--teal);
+  text-shadow: var(--teal-text-shadow);
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.thanks-message {
+  color: var(--teal);
+  text-shadow: var(--teal-text-shadow);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.thanks-subtext {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.thanks-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thanks-buttons .btn-secondary {
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .thanks-section {
+    padding: 3rem 0;
+    min-height: auto;
+  }
+
+  .thanks-title {
+    font-size: 2rem;
+  }
+
+  .thanks-message {
+    font-size: 1.1rem;
+  }
+
+  .thanks-subtext {
+    font-size: 0.95rem;
+  }
+
+  .thanks-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thanks-buttons .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
